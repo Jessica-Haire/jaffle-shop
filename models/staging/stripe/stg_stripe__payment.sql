@@ -9,13 +9,13 @@ source as (
 renamed as (
 
     select
-        id,
-        orderid,
-        paymentmethod,
-        status,
-        amount,
-        created,
-        _batched_at
+        id as payment_id, 
+        orderid as order_id,
+        paymentmethod as payment_method,
+        status as order_status,
+        amount as paymnet_amount,
+        created as payment_created,
+        _batched_at as payment_batched_at
 
     from source
 
