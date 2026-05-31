@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_stripe__payment
+    description: stripe payment records for customer orders, standardized for downstream modeling.
+    columns:
+      - name: payment_id
+        description: unique identifier for a payment transaction.
+      - name: order_id
+        description: unique identifier for the order the payment is associated with.
+      - name: payment_method
+        description: method used by the customer to pay for the order.
+      - name: order_status
+        description: current status of the payment transaction.
+      - name: payment_amount
+        description: amount charged in the payment transaction.
+      - name: payment_created
+        description: timestamp when the payment transaction was created.
+      - name: payment_batched_at
+        description: timestamp when the payment record was loaded into the raw data pipeline.
